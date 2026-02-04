@@ -10,3 +10,7 @@ body {
 h1, h2, h3, h4, h5, h6 {
     margin-block-start: 0;
 }
+
+.font-box {
+    font-family: var(--font-family, "Comic Sans MS");
+}
