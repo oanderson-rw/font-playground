@@ -17,7 +17,12 @@ function createFontBoxElement(fontData) {
 
     const articleEl = fontBoxEl.querySelector('article');
     articleEl.id = `fontbox-${fontData.id}`;
-    articleEl.style.setProperty('--font-family', fontData.family);
+
+    articleEl.querySelector('h3 > [data-family]').innerText = fontData.family;
+    articleEl.querySelector('h3 > [data-is-variable]').innerText = fontData.isVariable ? '(variable)' : '';
+    articleEl.querySelector('p').style.setProperty('--font-family', fontData.family);
+    articleEl.querySelector('a').href = fontData.sourceUrl;
+
     // TODO: Add more markup stuff to fontBoxEl?
 
     return fontBoxEl;
@@ -49,7 +54,7 @@ Promise.all(fontBoxes.values().map(({face}) => {
     .then(() => {
         console.log('Loaded all fonts!');
         const fontBoxesEl = document.getElementById('font-boxes');
-        for (const { boxEl } of fontBoxes) {
+        for (const {boxEl} of fontBoxes) {
             fontBoxesEl.appendChild(boxEl);
         }
     })

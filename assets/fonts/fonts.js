@@ -15,28 +15,28 @@ const fonts = [
         filename: 'Inter-VariableFont_opsz,wght.ttf',
         id: 'inter',
         family: 'Inter',
-        sourceUrl: '',
+        sourceUrl: 'https://fonts.google.com/specimen/Inter',
         isVariable: true
     },
     {
         filename: 'NotoSans-VariableFont_wdth,wght.ttf',
         id: 'notosans',
         family: 'Noto Sans',
-        sourceUrl: '',
+        sourceUrl: 'https://fonts.google.com/noto/specimen/Noto+Sans',
         isVariable: true
     },
     {
         filename: 'Roboto-VariableFont_wdth,wght.ttf',
         id: 'roboto',
         family: 'Roboto',
-        sourceUrl: '',
+        sourceUrl: 'https://fonts.google.com/specimen/Roboto',
         isVariable: true
     },
     {
         filename: 'WorkSans-VariableFont_wght.ttf',
         id: 'worksans',
         family: 'Work Sans',
-        sourceUrl: '',
+        sourceUrl: 'https://fonts.google.com/specimen/Work+Sans',
         isVariable: true
     }
 ];
