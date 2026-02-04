@@ -5,7 +5,7 @@
  * @property {FontFace} fontFace
  */
 
-import fontsData from '/assets/fonts/fonts.js';
+import fontsData from 'assets/fonts/fonts.js';
 
 /**
  * @param {FontData} fontData
