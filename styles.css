@@ -1,16 +1,127 @@
+@font-face {
+    font-family: "DM Serif Display";
+    src: url("assets/fonts-page/DMSerifDisplay-Regular.ttf");
+    font-style: normal;
+    font-weight: normal;
+}
+
 *, *::before, *::after {
     box-sizing: border-box;
 }
 
+html {
+    -moz-text-size-adjust: none;
+    -webkit-text-size-adjust: none;
+    text-size-adjust: none;
+
+    font-size: 24pt;
+    line-height: 1.2;
+}
+
 body {
+    max-width: 1000px;
+
     margin: 0;
+    margin-block-start: 1rem;
+    margin-inline: auto;
     padding: 0;
+    padding-inline: 2rem;
+    padding-block-end: 33vh;
+
+    color: #666;
+
+    scroll-behavior: smooth;
+}
+
+h1 {
+    font-size: 1.333rem;
+    text-transform: uppercase;
+}
+
+h2 {
+    font-size: 1.25rem;
 }
 
 h1, h2, h3, h4, h5, h6 {
     margin-block-start: 0;
+
+    font-family: "DM Serif Display", serif;
 }
 
-.font-box p {
+article {
+    scroll-padding: 2rem;
+
+    padding: 1rem;
+
+    --border-radius: 20px;
+    border-radius: var(--border-radius);
+    background-color: white;
+
+    /* From https://css-generators.com/gradient-shadows/ */
+    position: relative;
+    transform-style: preserve-3d;
+}
+
+article a {
+    color: black;
+}
+
+article a[data-family] {
+    text-decoration: none;
+
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+article p {
+    /* --font-family is set on the font box by the fonts scripts */
     font-family: var(--font-family, "Comic Sans MS");
+    color: black;
+
+    margin: 0;
+    margin-block: 1rem;
+    padding: 1rem 0.5rem;
+
+    background-color: #ECECEC;
+}
+
+article:target {
+    border: 2px solid hotpink;
+
+    &::before {
+        --bg-color: linear-gradient(
+            45deg,
+            hsl(270deg 50% 40%) 0%,
+            hsl(283deg 57% 41%) 24%,
+            hsl(296deg 64% 43%) 35%,
+            hsl(309deg 72% 44%) 45%,
+            hsl(321deg 79% 46%) 55%,
+            hsl(334deg 86% 47%) 65%,
+            hsl(347deg 93% 49%) 76%,
+            hsl(0deg 100% 50%) 100%
+        );
+
+        /* From https://css-generators.com/gradient-shadows/ */
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: conic-gradient(from 90deg at 40% -25%, #ffd700, #f79d03, #ee6907, #e6390a, #de0d0d, #d61039, #cf1261, #c71585, #cf1261, #d61039, #de0d0d, #ee6907, #f79d03, #ffd700, #ffd700, #ffd700);
+        filter: blur(10px);
+        transform: translate3d(0px, 10px, -1px);
+        border-radius: inherit;
+        pointer-events: none;
+    }
+}
+
+.separator {
+    display: grid;
+    place-content: center;
+
+    width: 100%;
+
+    margin: 0;
+    margin-block: 1rem;
+
+    opacity: 0.333;
 }

@@ -18,10 +18,12 @@ function createFontBoxElement(fontData) {
     const articleEl = fontBoxEl.querySelector('article');
     articleEl.id = `fontbox-${fontData.id}`;
 
-    articleEl.querySelector('h3 > [data-family]').innerText = fontData.family;
-    articleEl.querySelector('h3 > [data-is-variable]').innerText = fontData.isVariable ? '(variable)' : '';
+    const familyLinkEl = articleEl.querySelector('h3 > [data-family]');
+    familyLinkEl.innerText = fontData.family;
+    familyLinkEl.href = `#fontbox-${fontData.id}`;
+
     articleEl.querySelector('p').style.setProperty('--font-family', fontData.family);
-    articleEl.querySelector('a').href = fontData.sourceUrl;
+    articleEl.querySelector('footer > a').href = fontData.sourceUrl;
 
     // TODO: Add more markup stuff to fontBoxEl?
 
