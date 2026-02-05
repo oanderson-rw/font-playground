@@ -18,9 +18,8 @@ function createFontBoxElement(fontData) {
     const articleEl = fontBoxEl.querySelector('article');
     articleEl.id = `${fontData.id}`;
 
-    const familyLinkEl = articleEl.querySelector('h3 > [data-family]');
-    familyLinkEl.innerText = fontData.family;
-    familyLinkEl.href = `#${fontData.id}`;
+    const familyEl = articleEl.querySelector('h3[data-family]');
+    familyEl.innerText = fontData.family;
 
     articleEl.querySelector('p').style.setProperty('--font-family', fontData.family);
     articleEl.querySelector('footer > a').href = fontData.sourceUrl;
