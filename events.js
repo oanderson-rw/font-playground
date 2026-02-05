@@ -7,6 +7,8 @@ const fontSizes = new Map([
     ['small', '--font-size--xs'],
 ]);
 
+let hasPickedFont = false;
+
 /**
  * @param {string} sizeNew - Which size to change to. Refer to fontSizes map for valid values
  * @return {void}
@@ -39,7 +41,10 @@ function changeFont(fontIdNew) {
     sourceEl.href = fontData.sourceUrl;
     sourceEl.innerText = "(source)";
 
-    document.querySelector('[data-hide-on-start]').removeAttribute('data-hide-on-start');
+    if (!hasPickedFont) {
+        document.querySelector('[data-hide-on-start]').removeAttribute('data-hide-on-start');
+        hasPickedFont = true;
+    }
 }
 
 document.addEventListener('click', ({target}) => {
