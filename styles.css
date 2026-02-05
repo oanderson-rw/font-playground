@@ -22,6 +22,7 @@ html {
     text-size-adjust: none;
 
     font: 16pt/1.2 "Piazzolla", serif;
+    font-optical-sizing: auto;
 }
 
 body {
