@@ -127,3 +127,20 @@ a {
 [data-hide-on-start] {
     display: none;
 }
+
+.fancy-text {
+    color: transparent;
+    text-shadow: none;
+
+    background: linear-gradient(in oklab to right, black, deeppink 50%, black);
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    background-clip: text;
+    animation: linear 360s slide infinite;
+}
+
+@keyframes slide {
+    to {
+      background-position: 200%;
+    }
+}
