@@ -53,7 +53,7 @@ const fontBoxes = [];
 fontsData.forEach((fontData) => {
     const fontFace = new FontFace(
         fontData.family,
-        `url("/assets/fonts/${fontData.filename}")`,
+        `url("assets/fonts/${fontData.filename}")`,
         {
             style: "normal",
             weight: "normal"
