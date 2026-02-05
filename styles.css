@@ -60,23 +60,7 @@ a {
     }
 }
 
-[data-size-options] button {
-    font-family: inherit;
-    font-size: inherit;
-    background-color: transparent;
-    border: 0;
-    padding: 0;
-
-    cursor: pointer;
-
-    text-decoration: underline;
-}
-
-article {
-    display: none;
-}
-
-article p {
+#font-showing p {
     /* --font-family and --font-size is set as inline style on the font box by the fonts scripts */
     font-family: var(--font-family);
     font-size: var(--font-size);
@@ -89,8 +73,46 @@ article p {
     background-color: #ECECEC;
 }
 
-article:target {
-    display: block;
+[data-family] {
+    color: orangered;
+}
+
+[data-source] {
+    font-size: 0.8rem;
+}
+
+/* Components */
+
+.button-list {
+    display: flex;
+    column-gap: 0.5rem;
+
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+
+    & button {
+        font-family: inherit;
+        font-size: inherit;
+        background-color: transparent;
+        border: 0;
+        padding: 0;
+
+        cursor: pointer;
+
+        text-decoration: underline;
+
+        border-radius: 3px;
+
+        &:hover {
+            text-decoration-color: hotpink;
+        }
+
+        &:active {
+            color: deeppink;
+        }
+    }
 }
 
 /* Utilities */
@@ -99,12 +121,6 @@ article:target {
     display: inline;
 }
 
-.inline-list {
-    display: flex;
-    column-gap: 0.5rem;
-
-    margin: 0;
-    padding: 0;
-
-    list-style: none;
+[data-hide-on-start] {
+    display: none;
 }

@@ -18,9 +18,9 @@
         <h1>Fonts Showcase</h1>
         <section>
             <p class="inline">Font: </p>
-            <ul data-font-options class="inline-list"></ul>
+            <ul data-font-options class="button-list"></ul>
             <p>Size:
-            <span data-size-options class="inline-list">
+            <span class="button-list">
                 <button data-event-change-size value="title">Title</button>
                 <button data-event-change-size value="subtitle">Subtitle</button>
                 <button data-event-change-size value="body">Body</button>
@@ -28,27 +28,20 @@
             </span>
             </p>
         </section>
-        <section>
-            <div id="font-boxes" style="--font-size: var(--font-size--lg)">
-            </div>
+        <section id="font-showing" style="--font-size: var(--font-size--lg)">
+            <header>
+                <h3>Now showing font:
+                    <span data-family>(nothing yet &mdash; select one above)</span>
+                    <a data-source></a>
+                </h3>
+            </header>
+            <p data-hide-on-start>The five boxing wizards jump quickly.</p>
         </section>
     </body>
 
-    <template id="font-box-template">
-        <article id="">
-            <header>
-                <h3 data-family></h3>
-            </header>
-            <p>The five boxing wizards jump quickly.</p>
-            <footer>
-                <a href="">URL</a>
-            </footer>
-        </article>
-    </template>
-
     <template id="font-list-option">
         <li>
-            <a href=""></a>
+            <button data-event-change-font></button>
         </li>
     </template>
 </html>
