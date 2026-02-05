@@ -9,12 +9,19 @@
     box-sizing: border-box;
 }
 
+:root {
+    --font-size--lg: 2rem;
+    --font-size--md: 1.5rem;
+    --font-size--sm: 1rem;
+    --font-size--xs: 0.6rem;
+}
+
 html {
     -moz-text-size-adjust: none;
     -webkit-text-size-adjust: none;
     text-size-adjust: none;
 
-    font-size: 24pt;
+    font-size: 16pt;
     line-height: 1.2;
 }
 
@@ -65,8 +72,9 @@ article a[data-family] {
 }
 
 article p {
-    /* --font-family is set as inline style on the font box by the fonts scripts */
+    /* --font-family and --font-size is set as inline style on the font box by the fonts scripts */
     font-family: var(--font-family);
+    font-size: var(--font-size);
     color: black;
 
     margin: 0;

@@ -47,6 +47,8 @@ function updatePageForFontOptions(fontData) {
     }
 }
 
+//// Linear execution starts here
+
 /** @type FontBox[] */
 const fontBoxes = [];
 fontsData.forEach((fontData) => {
