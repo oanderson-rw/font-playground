@@ -26,7 +26,7 @@ body {
     margin-inline: auto;
     padding: 0;
     padding-inline: 2rem;
-    padding-block-end: 33vh;
+    padding-block-end: 25vh;
 
     color: #666;
 
@@ -49,17 +49,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 article {
-    scroll-padding: 2rem;
-
-    padding: 1rem;
-
-    --border-radius: 20px;
-    border-radius: var(--border-radius);
-    background-color: white;
-
-    /* From https://css-generators.com/gradient-shadows/ */
-    position: relative;
-    transform-style: preserve-3d;
+    display: none;
 }
 
 article a {
@@ -75,8 +65,8 @@ article a[data-family] {
 }
 
 article p {
-    /* --font-family is set on the font box by the fonts scripts */
-    font-family: var(--font-family, "Comic Sans MS");
+    /* --font-family is set as inline style on the font box by the fonts scripts */
+    font-family: var(--font-family);
     color: black;
 
     margin: 0;
@@ -87,41 +77,5 @@ article p {
 }
 
 article:target {
-    border: 2px solid hotpink;
-
-    &::before {
-        --bg-color: linear-gradient(
-            45deg,
-            hsl(270deg 50% 40%) 0%,
-            hsl(283deg 57% 41%) 24%,
-            hsl(296deg 64% 43%) 35%,
-            hsl(309deg 72% 44%) 45%,
-            hsl(321deg 79% 46%) 55%,
-            hsl(334deg 86% 47%) 65%,
-            hsl(347deg 93% 49%) 76%,
-            hsl(0deg 100% 50%) 100%
-        );
-
-        /* From https://css-generators.com/gradient-shadows/ */
-        content: "";
-        position: absolute;
-        inset: 0;
-        background: conic-gradient(from 90deg at 40% -25%, #ffd700, #f79d03, #ee6907, #e6390a, #de0d0d, #d61039, #cf1261, #c71585, #cf1261, #d61039, #de0d0d, #ee6907, #f79d03, #ffd700, #ffd700, #ffd700);
-        filter: blur(10px);
-        transform: translate3d(0px, 10px, -1px);
-        border-radius: inherit;
-        pointer-events: none;
-    }
-}
-
-.separator {
-    display: grid;
-    place-content: center;
-
-    width: 100%;
-
-    margin: 0;
-    margin-block: 1rem;
-
-    opacity: 0.333;
+    display: block;
 }

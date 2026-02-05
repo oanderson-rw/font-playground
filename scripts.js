@@ -16,11 +16,11 @@ function createFontBoxElement(fontData) {
     const fontBoxEl = document.importNode(fontBoxTemplate.content, true);
 
     const articleEl = fontBoxEl.querySelector('article');
-    articleEl.id = `fontbox-${fontData.id}`;
+    articleEl.id = `${fontData.id}`;
 
     const familyLinkEl = articleEl.querySelector('h3 > [data-family]');
     familyLinkEl.innerText = fontData.family;
-    familyLinkEl.href = `#fontbox-${fontData.id}`;
+    familyLinkEl.href = `#${fontData.id}`;
 
     articleEl.querySelector('p').style.setProperty('--font-family', fontData.family);
     articleEl.querySelector('footer > a').href = fontData.sourceUrl;
@@ -28,6 +28,24 @@ function createFontBoxElement(fontData) {
     // TODO: Add more markup stuff to fontBoxEl?
 
     return fontBoxEl;
+}
+
+/**
+ * @param {FontData} fontData
+ * @return {void}
+ */
+function updatePageForFontOptions(fontData) {
+    const fontOptionsListEl = document.querySelector('[data-font-options]');
+    const fontOptionTemplate = document.getElementById('font-list-option');
+
+    for (const { id, family } of fontData) {
+        const fontOptionEl = document.importNode(fontOptionTemplate.content, true);
+        const linkEl = fontOptionEl.querySelector('a');
+        linkEl.href = `#${id}`;
+        linkEl.innerText = family;
+
+        fontOptionsListEl.appendChild(fontOptionEl);
+    }
 }
 
 /** @type FontBox[] */
@@ -59,6 +77,8 @@ Promise.all(fontBoxes.values().map(({face}) => {
         for (const {boxEl} of fontBoxes) {
             fontBoxesEl.appendChild(boxEl);
         }
+
+        updatePageForFontOptions(fontsData);
     })
     .catch((err) => {
         console.error('Error loading fonts:', err);

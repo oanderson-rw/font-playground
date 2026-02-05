@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Font Playground</title>
+        <title>Fonts Showcase</title>
 
         <link href="styles.css" rel="stylesheet"/>
         <script type="module" src="scripts.js" defer></script>
@@ -14,12 +14,13 @@
         <link rel="manifest" href="assets/favicon/site.webmanifest">
     </head>
     <body>
-        <h1>Font Playground</h1>
+        <h1>Fonts Showcase</h1>
         <section>
-            <h2>Configuration</h2>
+            <p>Font:</p>
+            <ul data-font-options></ul>
+            <p>Size: <button>Title</button><button>Subtitle</button><button>Body</button><button>Small</button></p>
         </section>
         <section>
-            <h2>Font Display</h2>
             <div id="font-boxes">
             </div>
         </section>
@@ -37,8 +38,11 @@
                 <a href="">URL</a>
             </footer>
         </article>
-        <div class="separator" role="presentation">
-            <img src="assets/images/separator--sm.png" width="200" height="64" alt="">
-        </div>
+    </template>
+
+    <template id="font-list-option">
+        <li>
+            <a href=""></a>
+        </li>
     </template>
 </html>
