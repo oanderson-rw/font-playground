@@ -60,6 +60,18 @@ a {
     }
 }
 
+[data-size-options] button {
+    font-family: inherit;
+    font-size: inherit;
+    background-color: transparent;
+    border: 0;
+    padding: 0;
+
+    cursor: pointer;
+
+    text-decoration: underline;
+}
+
 article {
     display: none;
 }
@@ -96,4 +108,3 @@ article:target {
 
     list-style: none;
 }
-
