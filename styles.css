@@ -1,6 +1,6 @@
 @font-face {
-    font-family: "DM Serif Display";
-    src: url("assets/fonts-page/DMSerifDisplay-Regular.ttf");
+    font-family: "Piazzolla";
+    src: url("assets/fonts-page/Piazzolla-VariableFont_opsz,wght.ttf");
     font-style: normal;
     font-weight: normal;
 }
@@ -21,8 +21,7 @@ html {
     -webkit-text-size-adjust: none;
     text-size-adjust: none;
 
-    font-size: 16pt;
-    line-height: 1.2;
+    font: 16pt/1.2 "Piazzolla", serif;
 }
 
 body {
@@ -35,25 +34,22 @@ body {
     padding-inline: 2rem;
     padding-block-end: 25vh;
 
-    color: #666;
+    color: #333;
 
     scroll-behavior: smooth;
 }
 
 h1 {
-    font-size: 1.333rem;
+    font-size: 2rem;
     text-transform: uppercase;
 }
 
 h2 {
-    font-size: 1.25rem;
+    font-size: 1.5rem;
 }
 
 h1, h2, h3, h4, h5, h6 {
     margin-block-start: 0;
-
-    font-family: "DM Serif Display", serif;
-    letter-spacing: 2px;
 }
 
 a {
