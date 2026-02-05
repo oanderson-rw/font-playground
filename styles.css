@@ -53,22 +53,19 @@ h1, h2, h3, h4, h5, h6 {
     margin-block-start: 0;
 
     font-family: "DM Serif Display", serif;
+    letter-spacing: 2px;
 }
 
-article {
-    display: none;
-}
-
-article a {
+a {
     color: black;
-}
-
-article a[data-family] {
-    text-decoration: none;
 
     &:hover {
         text-decoration: underline;
     }
+}
+
+article {
+    display: none;
 }
 
 article p {
@@ -87,3 +84,20 @@ article p {
 article:target {
     display: block;
 }
+
+/* Utilities */
+
+.inline {
+    display: inline;
+}
+
+.inline-list {
+    display: flex;
+    column-gap: 0.5rem;
+
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+}
+
