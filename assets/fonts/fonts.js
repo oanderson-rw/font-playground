@@ -38,6 +38,13 @@ const fonts = [
         family: 'Work Sans',
         sourceUrl: 'https://fonts.google.com/specimen/Work+Sans',
         isVariable: true
+    },
+    {
+        filename: 'Lato-Regular.ttf',
+        id: 'lato',
+        family: 'Lato',
+        sourceUrl: 'https://fonts.google.com/specimen/Lato',
+        isVariable: false
     }
 ];
 
