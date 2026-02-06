@@ -77,7 +77,11 @@ a {
 }
 
 [data-family] {
-    color: orangered;
+    color: deeppink;
+}
+
+[data-font-size] {
+    color: tomato;
 }
 
 [data-source] {
@@ -122,10 +126,6 @@ a {
 
 .inline {
     display: inline;
-}
-
-[data-hide-on-start] {
-    display: none;
 }
 
 .fancy-text {

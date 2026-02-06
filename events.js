@@ -16,6 +16,7 @@ let hasPickedFont = false;
 function changeFontSize(sizeNew) {
     document.getElementById('font-showing')
         .style.setProperty('--font-size', `var(${fontSizes.get(sizeNew)}`);
+    document.querySelector('[data-font-size]').innerText = sizeNew;
 }
 
 /**
@@ -24,7 +25,7 @@ function changeFontSize(sizeNew) {
  */
 function changeFont(fontIdNew) {
     /** @type FontData */
-    const fontData = fontsData.values().find(({ id }) => id === fontIdNew);
+    const fontData = fontsData.values().find(({id}) => id === fontIdNew);
     if (!fontData) {
         console.error("Couldn\'t update page for font", fontNew);
         return;
@@ -42,7 +43,10 @@ function changeFont(fontIdNew) {
     sourceEl.innerText = "(source)";
 
     if (!hasPickedFont) {
-        document.querySelector('[data-hide-on-start]').removeAttribute('data-hide-on-start');
+        document.querySelectorAll('[data-hide-on-start]').values().forEach((el) => el.removeAttribute('hidden'));
+        document.querySelectorAll('[data-hide-after-start]').values().forEach((el) => {
+            el.setAttribute('hidden', '');
+        });
         hasPickedFont = true;
     }
 }
