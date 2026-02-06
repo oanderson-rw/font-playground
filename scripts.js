@@ -24,7 +24,25 @@ function updatePageForFontOptions(fontData) {
     }
 }
 
+/**
+ * @param {boolean} fontsReady
+ */
+function toggleElementsOnFontsState(fontsReady) {
+    const fontsReadyEls = document.querySelectorAll('[data-show-when-fonts-ready]').values();
+    const fontsLoadingEls = document.querySelectorAll('[data-show-when-fonts-loading]').values();
+
+    if (fontsReady) {
+        fontsLoadingEls.forEach((el) => el.classList.add('hide'));
+        fontsReadyEls.forEach((el) => el.classList.remove('hide'));
+    } else {
+        fontsLoadingEls.forEach((el) => el.classList.remove('hide'));
+        fontsReadyEls.forEach((el) => el.classList.add('hide'));
+    }
+}
+
 //// Linear execution starts here
+
+toggleElementsOnFontsState(false);
 
 /** @type FontFace[] */
 const fontFaces = [];
@@ -48,6 +66,7 @@ Promise.all(fontFaces.values().map((face) => {
     .then(() => {
         console.log('Loaded all fonts!');
         updatePageForFontOptions(fontsData);
+        toggleElementsOnFontsState(true);
     })
     .catch((err) => {
         console.error('Error loading fonts:', err);

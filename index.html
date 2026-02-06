@@ -19,7 +19,8 @@
         <section class="configuration">
             <div class="font-options">
                 <p class="inline"><strong>Font</strong>:</p>
-                <ul data-font-not-yet-picked data-font-options class="button-list"></ul>
+                <p data-show-when-fonts-loading data-font-options-loading class="margin--none">📥 Loading fonts...</p>
+                <ul data-show-when-fonts-ready data-font-not-yet-picked data-font-options class="button-list hide"></ul>
             </div>
             <div>
                 <p class="inline">Size (large to small):
@@ -55,7 +56,7 @@
                 </span>
             </div>
         </section>
-        <section id="font-showing" style="--font-size: var(--font-size--lg)">
+        <section data-show-when-fonts-ready id="font-showing" class="hide" style="--font-size: var(--font-size--lg)">
             <header>
                 <h3 data-hide-after-start>
                     (<span data-font-not-yet-picked>Select a font above</span> to get started)
