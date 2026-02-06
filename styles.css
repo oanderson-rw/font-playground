@@ -64,6 +64,27 @@ section + section {
     margin-block-start: 1rem;
 }
 
+[data-font-not-yet-picked] {
+    position: relative;
+}
+
+[data-font-not-yet-picked]::before {
+    content: '';
+    position: absolute;
+    display: block;
+    inset: 0;
+    filter: blur(10px);
+    z-index: -1;
+
+    background: linear-gradient(in oklch to right, hotpink, white, hotpink);
+    background-size: 200% auto;
+    animation: linear 1.5s slide infinite;
+
+    @media(prefers-reduced-motion: reduce) {
+        animation: none;
+    }
+}
+
 .configuration {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
@@ -123,6 +144,8 @@ section + section {
 
     list-style: none;
 
+    width: fit-content;
+
     & button {
         font-family: inherit;
         font-size: inherit;
@@ -165,6 +188,10 @@ section + section {
     -webkit-background-clip: text;
     background-clip: text;
     animation: linear 720s slide infinite;
+    
+    @media(prefers-reduced-motion: reduce) {
+        animation: none;
+    }
 }
 
 @keyframes slide {

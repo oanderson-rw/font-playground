@@ -48,6 +48,8 @@ function changeFont(fontIdNew) {
         document.querySelectorAll('[data-hide-after-start]').values().forEach((el) => {
             el.setAttribute('hidden', '');
         });
+        document.querySelector('[data-font-not-yet-picked]').removeAttribute('data-font-not-yet-picked');
+
         hasPickedFont = true;
     }
 }
