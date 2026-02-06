@@ -22,7 +22,7 @@
                 <ul data-font-not-yet-picked data-font-options class="button-list"></ul>
             </div>
             <div>
-                <p class="inline">Size:
+                <p class="inline">Size (large to small):
                     <span class="button-list">
                         <button data-event-change-size value="title">Title</button>
                         <button data-event-change-size value="subtitle">Subtitle</button>
@@ -41,7 +41,7 @@
                     spellcheck="false"
                     value=""
                 />
-                <span class="button-list">
+                <span class="button-list small-text">
                     <button data-event-text-show-option value="lorem">Lorem ipsum</button>
                     <button data-event-text-show-option value="pangram">Pangram</button>
                     <button data-event-text-show-option value="glyphset">Glyph set</button>
@@ -58,7 +58,7 @@
         <section id="font-showing" style="--font-size: var(--font-size--lg)">
             <header>
                 <h3 data-hide-after-start>
-                    (Select a font above to get started)
+                    (<span data-font-not-yet-picked>Select a font above</span> to get started)
                 </h3>
                 <h3 data-hide-on-start hidden>
                     Now showing <span data-family></span> at <span data-font-size>title</span> size <a data-source></a>

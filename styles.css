@@ -213,6 +213,10 @@ footer {
     display: block;
 }
 
+.small-text {
+    font-size: 0.75em;
+}
+
 .fancy-text {
     color: transparent;
     text-shadow: none;
