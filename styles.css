@@ -64,6 +64,19 @@ section + section {
     margin-block-start: 1rem;
 }
 
+footer {
+    --corner-spacing: 1rem;
+    --corner-spacing--half: calc(var(--corner-spacing) * 0.5);
+    position: absolute;
+    right: var(--corner-spacing--half);
+    bottom: var(--corner-spacing--half);
+    padding: var(--corner-spacing--half);
+
+    font-size: 0.75rem;
+
+    background-color: white;
+}
+
 [data-font-not-yet-picked] {
     position: relative;
 }
