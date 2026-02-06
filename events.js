@@ -8,6 +8,11 @@ const fontSizes = new Map([
     ['small', '--font-size--xs'],
 ]);
 
+const layouts = new Map([
+    ["paragraph", "fontShowingParagraph"],
+    ["cards", "fontShowingCards"]
+]);
+
 let hasPickedFont = false;
 
 /**
@@ -37,7 +42,7 @@ function changeFont(fontIdNew) {
     const familyEl = fontShowingEl.querySelector('[data-family]');
     familyEl.innerText = fontData.family;
 
-    fontShowingEl.querySelector('p').style.setProperty('--font-family', fontData.family);
+    fontShowingEl.querySelectorAll('[data-font-showing]').values().forEach(el => el.style.setProperty('--font-family', fontData.family));
 
     const sourceEl = fontShowingEl.querySelector('[data-source]');
     sourceEl.href = fontData.sourceUrl;
@@ -69,7 +74,21 @@ function updateShownTextByOption(option) {
  * @param {string} textNew - The text to show for the font-showing text
  */
 function updateShownText(textNew) {
-    document.querySelector('[data-font-showing]').innerText = textNew ? textNew : `(enter some text to show)`;
+    document.querySelectorAll('[data-font-showing]').values().forEach(el => el.innerText = textNew ? textNew : `(enter some text to show)`);
+}
+
+/**
+ * @param {string} layoutNew
+ */
+function updateLayout(layoutNew) {
+    const layoutToShowDatasetName = layouts.get(layoutNew);
+    if (!layoutToShowDatasetName) {
+        return;
+    }
+
+    document.querySelectorAll('[data-font-showing-container]').values().forEach((el) => {
+        el.classList.toggle('hide', !(layoutToShowDatasetName in el.dataset));
+    });
 }
 
 document.addEventListener('click', ({target}) => {
@@ -83,6 +102,8 @@ document.addEventListener('click', ({target}) => {
         changeFont(target.value);
     } else if ('eventTextShowOption' in target.dataset) {
         updateShownTextByOption(target.value);
+    } else if ('eventChangeLayout' in target.dataset) {
+        updateLayout(target.value);
     }
 });
 
@@ -97,4 +118,5 @@ document.addEventListener('input', ({ target }) => {
 });
 
 //// Init stuff
-document.getElementById('input-text-to-show').value = "The five boxing wizards jump quickly.";
+updateShownTextByOption('pangram');
+updateLayout('paragraph');

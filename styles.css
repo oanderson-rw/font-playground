@@ -131,7 +131,7 @@ footer {
     padding-block: 1rem;
     border-block: 1px solid #BBB;
 
-    word-break: break-all;
+    word-break: break-word;
 }
 
 [data-family] {
@@ -182,7 +182,17 @@ footer {
     }
 }
 
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+}
+
 /* Utilities */
+
+.hide {
+    display: none !important;
+}
 
 .inline {
     display: inline;

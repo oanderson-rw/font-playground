@@ -31,7 +31,7 @@
                     </span>
                 </p>
             </div>
-            <div class="configuration--span">
+            <div>
                 <label class="block" for="input-text-to-show">Text to show:</label>
                 <input
                     id="input-text-to-show"
@@ -47,6 +47,13 @@
                     <button data-event-text-show-option value="glyphset">Glyph set</button>
                 </span>
             </div>
+            <div>
+                <p class="inline">Layout:
+                <span class="button-list">
+                    <button data-event-change-layout value="paragraph">Paragraph</button>
+                    <button data-event-change-layout value="cards">Three cards</button>
+                </span>
+            </div>
         </section>
         <section id="font-showing" style="--font-size: var(--font-size--lg)">
             <header>
@@ -57,7 +64,19 @@
                     Now showing <span data-family></span> at <span data-font-size>title</span> size <a data-source></a>
                 </h3>
             </header>
-            <p data-font-showing data-hide-on-start hidden>The five boxing wizards jump quickly.</p>
+            <article data-hide-on-start hidden>
+                <p data-font-showing-container data-font-showing data-font-showing-paragraph>
+                    The five boxing wizards jump quickly.
+                </p>
+                <div data-font-showing-container data-font-showing-cards class="cards">
+                    <p data-font-showing>
+                        The five boxing wizards jump quickly.</p>
+                    <p data-font-showing>
+                        The five boxing wizards jump quickly.</p>
+                    <p data-font-showing>
+                        The five boxing wizards jump quickly.</p>
+                </div>
+            </article>
         </section>
         <footer>
             <a href="https://github.com/oanderson-rw/font-playground">Github source code</a>
