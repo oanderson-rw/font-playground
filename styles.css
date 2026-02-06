@@ -64,6 +64,12 @@ section + section {
     margin-block-start: 1rem;
 }
 
+.configuration {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1rem;
+}
+
 #input-text-to-show {
     font-family: inherit;
     font-size: inherit;
