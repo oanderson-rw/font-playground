@@ -1,4 +1,5 @@
 import fontsData from './assets/fonts/fonts.js';
+import textOptions from './text-options.js';
 
 const fontSizes = new Map([
     ['title', '--font-size--lg'],
@@ -51,6 +52,24 @@ function changeFont(fontIdNew) {
     }
 }
 
+/**
+ * @param {string} option - Ready-made text option selected by the user
+ */
+function updateShownTextByOption(option) {
+    const textNew = textOptions.get(option);
+    if (textNew) {
+        document.getElementById('input-text-to-show').value = textNew;
+        updateShownText(textNew);
+    }
+}
+
+/**
+ * @param {string} textNew - The text to show for the font-showing text
+ */
+function updateShownText(textNew) {
+    document.querySelector('[data-font-showing]').innerText = textNew ? textNew : `(enter some text to show)`;
+}
+
 document.addEventListener('click', ({target}) => {
     if (!target) {
         return;
@@ -60,5 +79,20 @@ document.addEventListener('click', ({target}) => {
         changeFontSize(target.value);
     } else if ('eventChangeFont' in target.dataset) {
         changeFont(target.value);
+    } else if ('eventTextShowOption' in target.dataset) {
+        updateShownTextByOption(target.value);
     }
 });
+
+document.addEventListener('input', ({ target }) => {
+   if (!target) {
+       return;
+   }
+
+   if (target.id === 'input-text-to-show') {
+       updateShownText(target.value);
+   }
+});
+
+//// Init stuff
+document.getElementById('input-text-to-show').value = "The five boxing wizards jump quickly.";

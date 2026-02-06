@@ -33,7 +33,6 @@ body {
     margin-inline: auto;
     padding: 0;
     padding-inline: 2rem;
-    padding-block-end: 25vh;
 
     color: #333;
 
@@ -61,6 +60,21 @@ a {
     }
 }
 
+section + section {
+    margin-block-start: 1rem;
+}
+
+#input-text-to-show {
+    font-family: inherit;
+    font-size: inherit;
+
+    width: 100%;
+
+    border: 1px solid #CCC;
+    border-radius: 5px;
+    padding-inline: 0.5rem;
+}
+
 #font-showing {
     border-block-start: 4px solid #DDD;
 
@@ -76,6 +90,8 @@ a {
     margin: 0;
     padding-block: 1rem;
     border-block: 1px solid #BBB;
+
+    word-break: break-all;
 }
 
 [data-family] {
@@ -128,6 +144,10 @@ a {
 
 .inline {
     display: inline;
+}
+
+.block {
+    display: block;
 }
 
 .fancy-text {

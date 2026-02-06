@@ -17,7 +17,7 @@
     <body>
         <h1 class="fancy-text">Fonts Showcase</h1>
         <section>
-            <p class="inline">Font: </p>
+            <p class="inline">Font:</p>
             <ul data-font-options class="button-list"></ul>
             <p>Size:
             <span class="button-list">
@@ -27,6 +27,20 @@
                 <button data-event-change-size value="small">Small</button>
             </span>
             </p>
+            <label class="block" for="input-text-to-show">Text to show:</label>
+            <input
+                id="input-text-to-show"
+                type="text"
+                placeholder="Find hungry samurai."
+                autocomplete="off"
+                spellcheck="false"
+                value=""
+            />
+            <span class="button-list">
+                <button data-event-text-show-option value="lorem">Lorem ipsum</button>
+                <button data-event-text-show-option value="pangram">Pangram</button>
+                <button data-event-text-show-option value="glyphset">Glyph set</button>
+            </span>
         </section>
         <section id="font-showing" style="--font-size: var(--font-size--lg)">
             <header>
