@@ -128,10 +128,21 @@ footer {
     color: black;
 
     margin: 0;
-    padding-block: 1rem;
-    border-block: 1px solid #BBB;
+    padding: 1rem 1rem;
+
+    border: 1px solid #EEE;
+    border-radius: 15px;
+
+    --shadow-color: 0deg 0% 75%;
+    box-shadow:
+        1px 1px 1.6px hsl(var(--shadow-color) / 0.34),
+        2.8px 2.8px 4.5px -0.6px hsl(var(--shadow-color) / 0.34),
+        5.6px 5.6px 8.9px -1.2px hsl(var(--shadow-color) / 0.34),
+        11.2px 11.2px 17.8px -1.9px hsl(var(--shadow-color) / 0.34),
+        21.8px 21.8px 34.7px -2.5px hsl(var(--shadow-color) / 0.34);
 
     word-break: break-word;
+    text-wrap: pretty;
 }
 
 [data-family] {
@@ -211,7 +222,7 @@ footer {
     -webkit-background-clip: text;
     background-clip: text;
     animation: linear 720s slide infinite;
-    
+
     @media(prefers-reduced-motion: reduce) {
         animation: none;
     }
@@ -219,6 +230,6 @@ footer {
 
 @keyframes slide {
     to {
-      background-position: 200%;
+        background-position: 200%;
     }
 }
