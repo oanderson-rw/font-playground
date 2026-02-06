@@ -136,7 +136,7 @@ a {
     background-size: 200% auto;
     -webkit-background-clip: text;
     background-clip: text;
-    animation: linear 360s slide infinite;
+    animation: linear 720s slide infinite;
 }
 
 @keyframes slide {
