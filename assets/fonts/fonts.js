@@ -45,6 +45,27 @@ const fonts = [
         family: 'Lato',
         sourceUrl: 'https://fonts.google.com/specimen/Lato',
         isVariable: false
+    },
+    {
+        filename: 'Figtree-VariableFont_wght.ttf',
+        id: 'figtree',
+        family: 'Figtree',
+        sourceUrl: 'https://fonts.google.com/specimen/Figtree',
+        isVariable: true
+    },
+    {
+        filename: 'IBMPlexSans-VariableFont_wdth,wght.ttf',
+        id: 'ibmplexsans',
+        family: 'IBM Plex Sans',
+        sourceUrl: 'https://fonts.google.com/specimen/IBM+Plex+Sans',
+        isVariable: true
+    },
+    {
+        filename: 'ClearSans-Regular.ttf',
+        id: 'clearsans',
+        family: 'Clear Sans',
+        sourceUrl: 'https://www.fontsquirrel.com/fonts/clear-sans',
+        isVariable: false
     }
 ];
 
