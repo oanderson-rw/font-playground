@@ -116,7 +116,7 @@ footer {
 }
 
 #font-showing {
-    border-block-start: 4px solid #DDD;
+    border-block-start: 2px solid #AAA;
 
     padding-block: 1rem;
 }
@@ -195,7 +195,7 @@ footer {
 
 .cards {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 1rem;
 }
 
