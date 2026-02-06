@@ -133,6 +133,8 @@ footer {
     border: 1px solid #EEE;
     border-radius: 15px;
 
+    background-color: white;
+
     --shadow-color: 0deg 0% 75%;
     box-shadow:
         1px 1px 1.6px hsl(var(--shadow-color) / 0.34),
