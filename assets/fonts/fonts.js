@@ -48,4 +48,5 @@ const fonts = [
     }
 ];
 
-export default fonts;
+const fontsSorted = fonts.sort(({id: idA}, {id: idB}) => idA.localeCompare(idB));
+export default fontsSorted;
