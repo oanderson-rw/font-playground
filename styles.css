@@ -170,6 +170,7 @@ footer {
 
 .button-list {
     display: flex;
+    flex-wrap: wrap;
     column-gap: 0.5rem;
 
     margin: 0;
