@@ -62,18 +62,20 @@ a {
 }
 
 #font-showing {
-    border-block-start: 2px solid #DDD;
+    border-block-start: 4px solid #DDD;
 
     padding-block: 1rem;
 }
 
-#font-showing p {
+#font-showing p[data-font-showing] {
     /* --font-family and --font-size is set as inline style on the font box by the fonts scripts */
     font-family: var(--font-family);
     font-size: var(--font-size);
     color: black;
 
     margin: 0;
+    padding-block: 1rem;
+    border-block: 1px solid #BBB;
 }
 
 [data-family] {
