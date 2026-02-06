@@ -41,7 +41,7 @@ function changeFont(fontIdNew) {
 
     const sourceEl = fontShowingEl.querySelector('[data-source]');
     sourceEl.href = fontData.sourceUrl;
-    sourceEl.innerText = "(source)";
+    sourceEl.innerText = "(font source)";
 
     if (!hasPickedFont) {
         document.querySelectorAll('[data-hide-on-start]').values().forEach((el) => el.removeAttribute('hidden'));
