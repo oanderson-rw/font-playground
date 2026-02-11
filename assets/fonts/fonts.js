@@ -19,13 +19,6 @@ const fonts = [
         isVariable: true
     },
     {
-        filename: 'NotoSans-VariableFont_wdth,wght.ttf',
-        id: 'notosans',
-        family: 'Noto Sans',
-        sourceUrl: 'https://fonts.google.com/noto/specimen/Noto+Sans',
-        isVariable: true
-    },
-    {
         filename: 'Roboto-VariableFont_wdth,wght.ttf',
         id: 'roboto',
         family: 'Roboto',
@@ -40,33 +33,12 @@ const fonts = [
         isVariable: true
     },
     {
-        filename: 'Lato-Regular.ttf',
-        id: 'lato',
-        family: 'Lato',
-        sourceUrl: 'https://fonts.google.com/specimen/Lato',
-        isVariable: false
-    },
-    {
         filename: 'Figtree-VariableFont_wght.ttf',
         id: 'figtree',
         family: 'Figtree',
         sourceUrl: 'https://fonts.google.com/specimen/Figtree',
         isVariable: true
     },
-    {
-        filename: 'IBMPlexSans-VariableFont_wdth,wght.ttf',
-        id: 'ibmplexsans',
-        family: 'IBM Plex Sans',
-        sourceUrl: 'https://fonts.google.com/specimen/IBM+Plex+Sans',
-        isVariable: true
-    },
-    {
-        filename: 'ClearSans-Regular.ttf',
-        id: 'clearsans',
-        family: 'Clear Sans',
-        sourceUrl: 'https://www.fontsquirrel.com/fonts/clear-sans',
-        isVariable: false
-    }
 ];
 
 const fontsSorted = fonts.sort(({id: idA}, {id: idB}) => idA.localeCompare(idB));
