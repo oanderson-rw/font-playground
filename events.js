@@ -1,13 +1,5 @@
 import fontsData from './assets/fonts/fonts.js';
 import textOptions from './text-options.js';
-
-const fontSizes = new Map([
-    ['title', '--font-size--lg'],
-    ['subtitle', '--font-size--md'],
-    ['body', '--font-size--sm'],
-    ['small', '--font-size--xs'],
-]);
-
 const layouts = new Map([
     ["paragraph", "fontShowingParagraph"],
     ["cards", "fontShowingCards"]
@@ -21,7 +13,7 @@ let hasPickedFont = false;
  */
 function changeFontSize(sizeNew) {
     document.getElementById('font-showing')
-        .style.setProperty('--font-size', `var(${fontSizes.get(sizeNew)}`);
+        .style.setProperty('--font-size', `${sizeNew}`);
     document.querySelector('[data-font-size]').innerText = sizeNew;
 }
 
@@ -96,9 +88,7 @@ document.addEventListener('click', ({target}) => {
         return;
     }
 
-    if ('eventChangeSize' in target.dataset) {
-        changeFontSize(target.value);
-    } else if ('eventChangeFont' in target.dataset) {
+    if ('eventChangeFont' in target.dataset) {
         changeFont(target.value);
     } else if ('eventTextShowOption' in target.dataset) {
         updateShownTextByOption(target.value);
@@ -114,9 +104,12 @@ document.addEventListener('input', ({ target }) => {
 
    if (target.id === 'input-text-to-show') {
        updateShownText(target.value);
+   } else if (target.id === 'input-font-size') {
+       changeFontSize(target.value);
    }
 });
 
 //// Init stuff
 updateShownTextByOption('pangram');
 updateLayout('paragraph');
+changeFontSize('1rem');

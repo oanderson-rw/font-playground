@@ -16,21 +16,48 @@
     </head>
     <body>
         <h1 class="fancy-text">Fonts Showcase</h1>
-        <section class="configuration">
-            <div class="font-options">
-                <p class="inline"><strong>Font</strong>:</p>
-                <p data-show-when-fonts-loading data-font-options-loading class="margin--none">📥 Loading fonts...</p>
-                <ul data-show-when-fonts-ready data-font-not-yet-picked data-font-options class="button-list hide"></ul>
-            </div>
-            <div>
-                <p class="inline">Size (large to small):
+        <section>
+            <div class="grid">
+                <div class="font-options">
+                    <p class="inline"><strong>Font</strong>:</p>
+                    <p data-show-when-fonts-loading data-font-options-loading class="margin--none">📥 Loading fonts...</p>
+                    <ul data-show-when-fonts-ready data-font-not-yet-picked data-font-options class="button-list hide"></ul>
+                </div>
+                <div>
+                    <p class="inline">Layout:
                     <span class="button-list">
-                        <button data-event-change-size value="title">Title</button>
-                        <button data-event-change-size value="subtitle">Subtitle</button>
-                        <button data-event-change-size value="body">Body</button>
-                        <button data-event-change-size value="small">Small</button>
+                        <button data-event-change-layout value="paragraph">Paragraph</button>
+                        <button data-event-change-layout value="cards">Three cards</button>
                     </span>
-                </p>
+                </div>
+            </div>
+            <div class="grid">
+                <label for="input-font-size">Font size (rem):
+                    <select
+                        id="input-font-size"
+                    >
+                        <option value="0.7rem">0.7</option>
+                        <option value="0.8rem">0.8 (body)</option>
+                        <option value="1rem" selected>1 (body)</option>
+                        <option value="1.25rem">1.25</option>
+                        <option value="1.5rem">1.5 (accent)</option>
+                        <option value="1.75rem">1.75</option>
+                        <option value="2rem">2 (title)</option>
+                        <option value="2.25rem">2.25</option>
+                    </select>
+                </label>
+                <label for="input-font-width">Font width:
+                    <input
+                        id="input-font-width"
+                        type="range"
+                    />
+                </label>
+                <label for="input-font-weight">Font weight:
+                    <input
+                        id="input-font-weight"
+                        type="range"
+                    />
+                </label>
             </div>
             <div>
                 <label class="block" for="input-text-to-show">Text to show:</label>
@@ -47,13 +74,6 @@
                     <button data-event-text-show-option value="pangram">Pangram</button>
                     <button data-event-text-show-option value="glyphset">Glyph set</button>
                     <button data-event-text-show-option value="headline">Headline</button>
-                </span>
-            </div>
-            <div>
-                <p class="inline">Layout:
-                <span class="button-list">
-                    <button data-event-change-layout value="paragraph">Paragraph</button>
-                    <button data-event-change-layout value="cards">Three cards</button>
                 </span>
             </div>
         </section>
