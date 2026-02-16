@@ -106,15 +106,16 @@ footer {
 }
 
 .grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-
     --grid-spacing: 1rem;
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, calc(50% - var(--grid-spacing))));
+
     gap: var(--grid-spacing);
     margin-bottom: var(--grid-spacing);
 }
 
-#input-text-to-show {
+.input {
     font-family: inherit;
     font-size: inherit;
 

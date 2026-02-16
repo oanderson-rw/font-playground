@@ -22,6 +22,7 @@
                     <p class="inline"><strong>Font</strong>:</p>
                     <p data-show-when-fonts-loading data-font-options-loading class="margin--none">📥 Loading fonts...</p>
                     <ul data-show-when-fonts-ready data-font-not-yet-picked data-font-options class="button-list hide"></ul>
+                    <p class="inline small-text">&ast; These fonts are loaded from the user's machine due to licensing restrictions for distribution.</p>
                 </div>
                 <div>
                     <p class="inline">Layout:
@@ -35,6 +36,7 @@
                 <label for="input-font-size">Font size (rem):
                     <select
                         id="input-font-size"
+                        class="input"
                     >
                         <option value="0.7rem">0.7</option>
                         <option value="0.8rem">0.8 (body)</option>
@@ -46,6 +48,7 @@
                         <option value="2.25rem">2.25</option>
                     </select>
                 </label>
+                <!--
                 <label for="input-font-width">Font width:
                     <input
                         id="input-font-width"
@@ -58,11 +61,13 @@
                         type="range"
                     />
                 </label>
+                -->
             </div>
             <div>
                 <label class="block" for="input-text-to-show">Text to show:</label>
                 <input
                     id="input-text-to-show"
+                    class="input"
                     type="text"
                     placeholder="Find hungry samurai."
                     autocomplete="off"
@@ -85,6 +90,7 @@
                 <h3 data-hide-on-start hidden>
                     Now showing <span data-family></span> at <span data-font-size>title</span> size <a data-source></a>
                 </h3>
+                <p data-hide-on-start hidden class="margin--none small-text">If the text below appears as a serif font, the selected font could not be loaded from the user machine.</p>
             </header>
             <article data-hide-on-start hidden>
                 <p data-font-showing-container data-font-showing data-font-showing-paragraph>

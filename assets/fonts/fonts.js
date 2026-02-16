@@ -39,6 +39,18 @@ const fonts = [
         sourceUrl: 'https://fonts.google.com/specimen/Figtree',
         isVariable: true
     },
+    {
+        id: 'arial',
+        family: 'Arial',
+        sourceUrl: 'https://fonts.adobe.com/fonts/arial',
+        isVariable: false
+    },
+    {
+        id: 'helvetica',
+        family: 'Helvetica',
+        sourceUrl: 'https://www.myfonts.com/collections/helvetica-font-linotype',
+        isVariable: false
+    }
 ];
 
 const fontsSorted = fonts.sort(({id: idA}, {id: idB}) => idA.localeCompare(idB));
