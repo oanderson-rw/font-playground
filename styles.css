@@ -243,10 +243,9 @@ footer {
     background-size: 200% auto;
     -webkit-background-clip: text;
     background-clip: text;
-    animation: linear 720s slide infinite;
-
-    @media(prefers-reduced-motion: reduce) {
-        animation: none;
+    
+    @media(prefers-reduced-motion: no-preference) {
+        animation: linear 720s slide infinite;
     }
 }
 
