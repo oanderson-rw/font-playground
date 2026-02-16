@@ -34,6 +34,7 @@ body {
     padding: 0;
     padding-inline: 2rem;
 
+    background-color: #F6F6F6;
     color: #333;
 
     scroll-behavior: smooth;
@@ -221,6 +222,10 @@ footer {
 
 .margin--none {
     margin: 0;
+}
+
+.margin-block-end--small {
+    margin-block-end: 0.5rem;
 }
 
 .inline {
