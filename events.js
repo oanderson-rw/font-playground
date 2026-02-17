@@ -83,6 +83,13 @@ function updateLayout(layoutNew) {
     });
 }
 
+/**
+ * @param {boolean} useTabularNumbers
+ */
+function updateFontForTabularNumbers(useTabularNumbers) {
+    document.querySelectorAll('[data-font-showing]').values().forEach(el => el.classList.toggle('font--tabular-numbers', useTabularNumbers));
+}
+
 document.addEventListener('click', ({target}) => {
     if (!target) {
         return;
@@ -94,6 +101,8 @@ document.addEventListener('click', ({target}) => {
         updateShownTextByOption(target.value);
     } else if ('eventChangeLayout' in target.dataset) {
         updateLayout(target.value);
+    } else if (target.id === 'input-tabular-numbers') {
+        updateFontForTabularNumbers(target.checked);
     }
 });
 

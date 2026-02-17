@@ -49,20 +49,12 @@
                         <option value="5rem">5 (compare glyphs)</option>
                     </select>
                 </label>
-                <!--
-                <label for="input-font-width">Font width:
-                    <input
-                        id="input-font-width"
-                        type="range"
-                    />
-                </label>
-                <label for="input-font-weight">Font weight:
-                    <input
-                        id="input-font-weight"
-                        type="range"
-                    />
-                </label>
-                -->
+                <fieldset>
+                    <legend>Options:</legend>
+                    <label for="input-tabular-numbers">
+                        <input id="input-tabular-numbers" type="checkbox">Tabular numbers (<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/font-variant-numeric#numeric-spacing-values">reference</a>)
+                    </label>
+                </fieldset>
             </div>
             <div>
                 <label class="block" for="input-text-to-show">Text to show:</label>
@@ -80,6 +72,7 @@
                     <button data-event-text-show-option value="glyphset-compare">Glyphs to compare</button>
                     <button data-event-text-show-option value="headline">Headline</button>
                     <button data-event-text-show-option value="lorem">Lorem ipsum</button>
+                    <button data-event-text-show-option value="numbers">Numbers</button>
                     <button data-event-text-show-option value="pangram">Pangram</button>
                 </span>
             </div>

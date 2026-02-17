@@ -4,6 +4,7 @@ const preformedTextOptions = new Map([
     ['glyphset', `ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890!@#$%^&*()-=<>,./?`],
     ['glyphset-compare', 'CRQWaegs'],
     ['headline', `Dig Uncovers Ancient Race of Skeleton People`],
+    ['numbers', '12345678901234567890123456789012345678901234567890']
 ]);
 
 

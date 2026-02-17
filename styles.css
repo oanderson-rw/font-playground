@@ -61,6 +61,15 @@ a {
     }
 }
 
+fieldset {
+    border: 0;
+    padding: 0;
+
+    legend {
+        margin-block-end: 0.25rem;
+    }
+}
+
 section + section {
     margin-block-start: 1rem;
 }
@@ -234,6 +243,10 @@ footer {
 
 .block {
     display: block;
+}
+
+.font--tabular-numbers {
+    font-variant-numeric: tabular-nums;
 }
 
 .small-text {
